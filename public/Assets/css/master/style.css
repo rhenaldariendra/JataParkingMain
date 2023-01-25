@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header-info {
+    display: flex;
+    height: 50px;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+}
+
+.header-info i{
+    margin-right: 10px;
+}
+
+.header-info .left {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    /* justify-content: flex-end; */
+    padding-left: 340px;
+    width: 33%;
+    background-color: #E84B4B;
+}
+
+.header-info .right {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 115px;
+    width: 67%;
+    background-color: #2A3467;
+}
+
+.header-info .right .separator {
+    margin: 0 18px;
+    font-weight: 300;
+}
+
+.header-info .right .social a{
+    color: #ffffff;
+}
+
+.header-info .right .social .bi{
+    margin-right: 18px;
+}
+
+
+.header-navigation {
+    box-sizing: border-box;
+    padding-left: 340px;
+    padding-right: 115px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navigation {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    font-size: 16px;
+}
+
+.navigation li {
+    padding: 0 18px;
+}
+
+.navigation li a {
+    color: #2A3467;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.navigation li a:hover{
+    color: #E84B4B;
+}
+
+.navigation li label{
+    display: block;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    color: #2A3467;
+    /* border: 1px solid black; */
+    font-weight: bold;
+    background-color: rgba(231, 230, 230, 0.349);
+    border-radius: 50%;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.navigation li label:hover{
+    background-color: #E84B4B;
+    color: white;
+}
+
+.navigation li label i{
+    font-size: 15px;
+}
+
+.navigation li .contact{
+    padding: 3px 7px;
+    border: 1px solid #2A3467;
+}
+
+.navigation li .contact:hover{
+    color: #ffffff;
+    background-color: #2A3467;
+}
