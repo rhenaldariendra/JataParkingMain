@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:800");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1, h2, h3, h4, h5, h6, p, a{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.head_news{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #633AB4;
+}
+
+
+.sub1_head_news{
+    display: flex;
+    align-items: center;
+    padding: 20px 0 6px 64px;
+}
+
+.sub1_head_news h1{
+    padding-left: 19px;
+}
+
+.sub2_head_news{
+    display: flex;
+    align-items: center;
+    padding: 2px 0 0 64px;
+}
+
+.sub2_head_news p{
+    padding-left: 4px;
+}
+
+.content_our_team{
+    width: auto;
+    padding: 35px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left_team{
+    width: 60%;
+}
+
+.left_team a{
+    text-decoration: none;
+    color: #FF8C39;
+}
+
+.bx_team{
+    text-align: right;
+}
+
+.right_team{
+    width: 25%;
+}
+
+.bx_rt_cr{
+    display: flex;
+}
+
+.content_recent{
+    display: flex;
+    flex-direction: column;
+}
+
+.bx_content_recent{
+    display: flex;
+    padding: 25px 0 10px 0;
+}
+
+.bx_content_recent img{
+    width: 88px;
+    height: 88px;
+}
+
+.bx_desc_cr{
+    padding-left: 17px;
+}
+
+.left_team h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+
+
+    color: #FF8C39;
+}
+
+
+.left_team h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 127.5%;
+    /* identical to box height, or 41px */
+    
+    color: #283261;
+    padding-bottom: 13px;
+}
+
+.left_team img{
+    width: 100%;
+    height: 420px;
+}
+
+.left_team p{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: justify;
+
+    color: #84858A;
+}
+
+.bx_team a:hover{
+    color: #ffa463;
+    font-weight: 600;
+}
+
+.bx_rt_cr h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 127.5%;
+    /* identical to box height, or 41px */
+
+
+    color: #283261;
+}
+
+.date_cr{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-align: justify;
+
+    color: #000000;
+}
+
+.desc_cr{
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: justify;
+
+    color: #000000;
+}
