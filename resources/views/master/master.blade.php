@@ -56,11 +56,11 @@
                     <a href="/">HOME</a>
                 </li>
                 <li id="a">
-                    <a id="b" href="#">ABOUT US</a>
+                    <a id="b" href="/profile_company">ABOUT US</a>
                     <ul id="c">
-                        <li><a href="#">Our Profile Company</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Our Team</a></li>
+                        <li><a href="/profile_company">Our Profile Company</a></li>
+                        <li><a href="/contactus">Contact Us</a></li>
+                        <li><a href="/ourteam">Our Team</a></li>
                     </ul>
                 </li>
                 <li id="d">
@@ -71,10 +71,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">PROJECTS</a>
+                    <a href="/project">PROJECTS</a>
                 </li>
                 <li>
-                    <a href="#">NEWS & BLOGS</a>
+                    <a href="/news">NEWS & BLOGS</a>
                 </li>
                 <li>
                     <p>|</p>
@@ -84,7 +84,7 @@
                     <label for="search"><i class="bi bi-search"></i></label>
                 </li>
                 <li>
-                    <a class="contact" href="#">CONTACT US</a>
+                    <a class="contact" href="/contactus">CONTACT US</a>
                 </li>
             </ul>
         </div>
