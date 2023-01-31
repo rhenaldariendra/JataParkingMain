@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,6 +22,23 @@ use Illuminate\Support\Facades\Session;
 Route::get('/', function () {
     return view('main.home');
 });
+
+Route::get('/profile_company', function () {
+    return view('main.aboutus');
+});
+Route::get('/contactus', function () {
+    return view('main.contactus');
+});
+Route::get('/ourteam', function () {
+    return view('main.ourteam');
+});
+Route::get('/news', function () {
+    return view('main.news');
+});
+Route::get('/project', function () {
+    return view('main.project');
+});
+
 
 
 
