@@ -1,8 +1,8 @@
 @extends('admin.master.master')
-@section('title', 'Teams - Admin Jataparking')
-@section('page-content', 'Greatest Teams')
+@section('title', 'News & Blogs - Admin Jataparking')
+@section('page-content', 'List of News & Blogs')
 @section('content-form')
-<form action="/admin/teams/add" method="post" enctype="multipart/form-data">
+<form action="/admin/news/add" method="post" enctype="multipart/form-data">
     @csrf
     <input type="file" name="image" id="image" accept="image/png, image/gif, image/jpeg" hidden>
     <div class="placeholders">
@@ -16,10 +16,14 @@
             </label>
         </div>
         <div class="right">
-            <input type="text" name="name" id="name" placeholder="Name">
-            <input type="text" name="instagram" id="instagram" placeholder="Instagram Link">
-            <input type="text" name="facebook" id="facebook" placeholder="Facebook Link">
-            <input type="text" name="twitter" id="twitter" placeholder="Twitter Link">
+            <input type="text" name="title" id="title" placeholder="Title">
+            <textarea type="text" name="description" id="description" placeholder="Description" cols="5"></textarea>
+            <select name="type" id="type">
+                <option value="">Select Type</option>
+                <option value="News">News</option>
+                <option value="Blog">Blog</option>
+            </select>
+
             <button type="submit">Upload</button>
         </div>
     </div>
@@ -28,21 +32,19 @@
 @endsection
 @section('contentt')
 <div class="list-item">
-    @foreach ($team as $data)
+    @foreach ($news as $data)
     <div class="placeholders listitem">
         <div class="left">
             <img class="imgs" src="{{Storage::url($data->photo)}}" alt="">
         </div>
         <div class="right a">
-            <label for="">Name</label>
-            <input type="text" value="{{$data->name}}" disabled>
-            <label for="">Instagram Link</label>
-            <input type="text" value="{{$data->instagram}}" disabled>
-            <label for="">Facebook Link</label>
-            <input type="text" value="{{$data->facebook}}" disabled>
-            <label for="">Twitter Link</label>
-            <input type="text" value="{{$data->twitter}}" disabled>
-            <form action="/admin/teams/delete/{{$data->id}}" method="POST">
+            <label for="">{{$data->type}} Title</label>
+            <input type="text" value="{{$data->title}}" disabled>
+            <label for="">Description</label>
+            <textarea disabled>{{$data->description}}</textarea>
+            <label for="">Location of Project</label>
+            <input type="text" value="{{$data->type}}" disabled>
+            <form action="/admin/project/delete/{{$data->id}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="delete" type="submit">Delete</button>
@@ -62,3 +64,7 @@
     }
 </script>
 @endsection
+
+
+
+

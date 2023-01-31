@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Project;
 use App\Models\Team;
 use Illuminate\Http\Request;
@@ -24,7 +25,10 @@ class AdminController extends Controller
         $team = Team::all();
         return view('admin.main.team', ['team' => $team]);
     }
-
+    public function getNews(){
+        $data = News::all();
+        return view('admin.main.news', ['news' => $data]);
+    }
 
     public function addProject(Request $request){
         $request->validate([
@@ -57,6 +61,29 @@ class AdminController extends Controller
         ]);
         $data = new Category();
         $data->name = $request->name;
+        $data->save();
+
+        return redirect()->back();
+    }
+    public function addNews(Request $request){
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'type' => 'required',
+            'image' => 'required',
+        ]);
+
+        $file = $request->file('image');
+        $img_name = "news_blogs_".time().'.'.$file->getClientOriginalExtension();
+        Storage::putFileAs('public/assets/img', $file, $img_name);
+        $img_name = 'assets/img/'.$img_name;
+
+        $data = new News();
+        $data->title = $request->title;
+        $data->description = $request->description;
+        $data->type = $request->type;
+        $data->photo = $img_name;
+        // dd($data);
         $data->save();
 
         return redirect()->back();
@@ -97,6 +124,13 @@ class AdminController extends Controller
     }
     public function deleteCategory($id) {
         $data = Category::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
+    public function deleteTeams($id) {
+        $data = Team::find($id);
+        // dd($data);
+        Storage::delete('public/'.$data->photo);
         $data->delete();
         return redirect()->back();
     }
