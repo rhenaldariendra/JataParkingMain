@@ -16,7 +16,7 @@ class AuthController extends Controller
 
         $field = filter_var($req->username, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
         if(Auth::attempt(array($field => $req->username, 'password' => $req->password))){
-            return redirect('/admin');
+            return redirect('/admin/project');
         }
         else{
             return redirect()->back();

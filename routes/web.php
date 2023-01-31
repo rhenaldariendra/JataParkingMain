@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -21,9 +22,20 @@ Route::get('/', function () {
 });
 
 
-Route::get('/admin', function () {
-    return view('admin.main.home');
-});
+
+
+Route::get('/admin/project', [AdminController::class, 'getProject']);
+Route::post('/admin/project/add', [AdminController::class, 'addProject']);
+Route::delete('/admin/project/delete/{id}', [AdminController::class, 'deleteProject']);
+
+Route::get('/admin/category', [AdminController::class, 'getCategory']);
+Route::post('/admin/category/add', [AdminController::class, 'addCategory']);
+Route::delete('/admin/category/delete/{id}', [AdminController::class, 'deleteCategory']);
+
+Route::get('/admin/teams', [AdminController::class, 'getTeams']);
+Route::post('/admin/teams/add', [AdminController::class, 'addTeams']);
+Route::delete('/admin/teams/delete/{id}', [AdminController::class, 'deleteTeams']);
+
 Route::get('/login', function () {
     return view('admin.login');
 });

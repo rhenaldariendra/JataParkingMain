@@ -22,10 +22,10 @@
         <a href="/logout"><i class="bi bi-save"></i></a>
     </div>
     <div class="navigation-content">
-        <a href="#">Products & Services</a>
-        <a href="#">Projects</a>
-        <a href="#">About Us</a>
-        <a href="#">News & Blogs</a>
+        <a href="/admin/project">Projects</a>
+        <a href="/admin/category">Projects Categories</a>
+        <a href="/admin/teams">Teams</a>
+        <a href="/admin/news">News & Blogs</a>
     </div>
 
     <div class="contentt">
@@ -34,7 +34,7 @@
 
         </div>
         <div class="list">
-            <h3>List of @yield('page-content')</h3>
+            <h3>@yield('page-content')</h3>
             @yield('contentt')
         </div>
     </div>
