@@ -128,20 +128,22 @@
 
 <div class="content-6">
     <div class="title">
-        <p>WORKING WITH EXCELLENT</p>
-        <h3>Our Great Team</h3>
+        <p>GETTING KNOW LATEST ABOUT US</p>
+        <h3>News & Blog</h3>
     </div>
-    <div class="team">
-        <div class="item">
+    <div class="sub-title">
+        <p>NEWS</p>
+        <h3>License Plat Recognition - LPR</h3>
+    </div>
+    <div class="containers">
+        <div class="left">
 
         </div>
-        <div class="item">
-
-        </div>
-        <div class="item">
-
+        <div class="right">
+            
         </div>
     </div>
+
 </div>
 
 <script>

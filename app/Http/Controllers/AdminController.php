@@ -71,6 +71,7 @@ class AdminController extends Controller
             'description' => 'required',
             'type' => 'required',
             'image' => 'required',
+            'date' => 'required',
         ]);
 
         $file = $request->file('image');
@@ -83,6 +84,7 @@ class AdminController extends Controller
         $data->description = $request->description;
         $data->type = $request->type;
         $data->photo = $img_name;
+        $data->date = $request->date;
         // dd($data);
         $data->save();
 

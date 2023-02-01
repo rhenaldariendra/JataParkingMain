@@ -61,7 +61,7 @@ Route::group(['middleware'=>['auth']], function(){
 });
 Route::get('/login', function () {
     return view('admin.login');
-})->name('login')->middleware('guest');
+})->name('login');
 Route::post('/login/user', [AuthController::class, 'login']);
 
 
