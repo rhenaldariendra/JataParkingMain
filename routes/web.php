@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -32,9 +33,7 @@ Route::get('/contactus', function () {
 Route::get('/ourteam', function () {
     return view('main.ourteam');
 });
-Route::get('/news', function () {
-    return view('main.news');
-});
+
 Route::get('/project', function () {
     return view('main.project');
 });
@@ -73,7 +72,7 @@ Route::get('/logout', function () {
 });
 
 
-
+Route::get('/news', [NewsController::class, 'getNews']);
 
 
 Route::get('/test', function () {
