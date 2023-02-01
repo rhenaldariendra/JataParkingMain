@@ -26,7 +26,7 @@
 </div>
 <div class="content_aboutus">
     <div class="sub1_ct_aboutus">
-        <img src="/Assets/Images/ex-company.svg" alt="">   
+        <img src="/Assets/Images/ex-company.svg" alt="">
         <div class="desc_content" style="padding-top: 20px; padding-left: 82px;">
             <p class="wlcm">Welcome to Jayaparking</p>
             <div class="bx_bluebig">
@@ -57,30 +57,13 @@
             <h2 class="blue_small">Our Mission</h2>
             <p>Menjadi perusahaan jasa pengelola parkir yang profesional dengan di dukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi untuk menjadi perusahaan termaju dan terkemuka.</p>
         </div>
-    
-    </div>
-</div>
-<div class="sub3_ct_aboutus">
-    <p class="sub3_grey">MEET OUR TEAM</p>
-    <h2>A Professional Our Team</h2>
-    <img src="/Assets/Images/line-ourteam.svg" class="line_sub3" alt="">
-    <p class="sub3_grey">We has 20+ years of experience with providing wide area services.</p>
-</div>
-<div class="container_sub3_ct_aboutus">
-    <div class="ct_in">
-        
-    </div>
-    <div class="ct_in">
-
-    </div>
-    <div class="ct_in">
 
     </div>
 </div>
 <div class="upper_footer_aboutus">
     <p>MORE ABOUT OUR</p>
     <h3>Company Profile</h3>
-    <img src="/Assets/Images/line-ourteam.svg" class="line_sub3" alt=""> 
+    <img src="/Assets/Images/line-ourteam.svg" class="line_sub3" alt="">
     <a href="" class="klik_btn">Klik Disini</a>
 </div>
 

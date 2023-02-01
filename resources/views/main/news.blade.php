@@ -24,41 +24,23 @@
         <div class="bx_team">
             <a href="">READ MORE</a>
         </div>
-    </div>  
+    </div>
     <div class="right_team">
         <div class="bx_rt_cr">
             <img src="/Assets/Images/line-recent.svg" alt="">
             <h1 style="padding-left: 25px;">Recent Post</h1>
         </div>
         <div class="content_recent">
+            @foreach ($news as $data)
             <div class="bx_content_recent">
-                <img src="" alt="">
+
+                <img src="{{Storage::url($data->photo)}}" alt="">
                 <div class="bx_desc_cr">
                     <p class="date_cr">February 5, 2019</p>
-                    <p class="desc_cr">Licence Plat Recognition - LPR</p>
+                    <p class="desc_cr">{{$data->title}}</p>
                 </div>
             </div>
-            <div class="bx_content_recent">
-                <img src="" alt="">
-                <div class="bx_desc_cr">
-                    <p class="date_cr">February 5, 2019</p>
-                    <p class="desc_cr">Licence Plat Recognition - LPR</p>
-                </div>
-            </div>
-            <div class="bx_content_recent">
-                <img src="" alt="">
-                <div class="bx_desc_cr">
-                    <p class="date_cr">February 5, 2019</p>
-                    <p class="desc_cr">Licence Plat Recognition - LPR</p>
-                </div>
-            </div>
-            <div class="bx_content_recent">
-                <img src="" alt="">
-                <div class="bx_desc_cr">
-                    <p class="date_cr">February 5, 2019</p>
-                    <p class="desc_cr">Licence Plat Recognition - LPR</p>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>

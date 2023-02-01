@@ -60,7 +60,6 @@
                     <ul id="c">
                         <li><a href="/profile_company">Our Profile Company</a></li>
                         <li><a href="/contactus">Contact Us</a></li>
-                        <li><a href="/ourteam">Our Team</a></li>
                     </ul>
                 </li>
                 <li id="d">
@@ -69,9 +68,6 @@
                         <li><a href="#">Products</a></li>
                         <li><a href="#">Services</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="/project">PROJECTS</a>
                 </li>
                 <li>
                     <a href="/news">NEWS & BLOGS</a>
