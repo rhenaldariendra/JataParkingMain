@@ -20,47 +20,20 @@
         <div class="category">
             <a href="#">ALL</a>
         </div>
+        @foreach ($category as $data)
         <div class="category">
-            <a href="#">HOSPITAL</a>
+            <a href="#">{{$data->name}}</a>
         </div>
-        <div class="category">
-            <a href="#">OFFICE</a>
-        </div>
-        <div class="category">
-            <a href="#">MARKET </a>
-        </div>
+        @endforeach
     </div>
     <div class="container_grid_content">
+        @foreach ($project as $data)
         <div class="content_project">
             <a href="">
-                <img src="" alt="">
+                <img src="{{Storage::url($data->photo)}}" alt="">
             </a>
         </div>
-        <div class="content_project">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
-        <div class="content_project">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
-        <div class="content_project">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
-        <div class="content_project">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
-        <div class="content_project">
-            <a href="">
-                <img src="" alt="">
-            </a>
-        </div>
+        @endforeach
     </div>
 </div>
 
