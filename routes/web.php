@@ -73,6 +73,7 @@ Route::get('/logout', function () {
 
 
 Route::get('/news', [NewsController::class, 'getNews']);
+Route::get("detail/{id}", [NewsController::class,'getDetailNews']);
 
 
 Route::get('/test', function () {

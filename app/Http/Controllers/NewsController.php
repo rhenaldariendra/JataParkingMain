@@ -11,4 +11,9 @@ class NewsController extends Controller
         $news = News::latest()->take(4)->get();
         return view('main.news', ['news' => $news, 'news' => $news]);
     }
+    public function getDetailNews($id) {
+        $news = News::find($id);
+        return view('main.detailnews', ['news' => $news, 'news' => $news]);
+    }
+
 }
