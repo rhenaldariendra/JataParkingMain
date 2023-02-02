@@ -16,8 +16,8 @@
 </div>
 
 <div class="content_our_team">
-    @foreach($news as $data)
     <div class="left_team">
+        @foreach($news as $data)
         <h3>{{$data->type}}</h3>
         <h1>{{$data->title}}</h1>
         <img class="img_news" src="{{Storage::url($data->photo)}}" alt="">
@@ -25,8 +25,8 @@
         <div class="bx_team">
             <a href="detail/{{$data['id']}}">READ MORE</a>
         </div>
+        @endforeach
     </div>
-    @endforeach
     <div class="right_team">
         <div class="bx_rt_cr">
             <img src="/Assets/Images/line-recent.svg" alt="">

@@ -104,14 +104,14 @@ h1, h2, h3, h4, h5, h6, p, a{
     font-size: 32px;
     line-height: 127.5%;
     /* identical to box height, or 41px */
-    
+
     color: #283261;
     padding-bottom: 13px;
 }
 
 .left_team img{
     width: 100%;
-    height: 420px;
+    height: 550px;
 }
 
 .left_team p{
@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6, p, a{
 }
 
 .desc_cr{
-    
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
