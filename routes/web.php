@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
@@ -20,9 +21,7 @@ use Illuminate\Support\Facades\Session;
 |
 */
 
-Route::get('/', function () {
-    return view('main.home');
-});
+Route::get('/', [ViewController::class, 'getHome']);
 
 Route::get('/profile_company', function () {
     return view('main.aboutus');
@@ -32,6 +31,9 @@ Route::get('/contactus', function () {
 });
 Route::get('/ourteam', function () {
     return view('main.ourteam');
+});
+Route::get('/product', function () {
+    return view('main.product');
 });
 
 Route::get('/project', function () {

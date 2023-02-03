@@ -127,20 +127,36 @@
 </div>
 
 <div class="content-6">
-    <div class="title">
-        <p>GETTING KNOW LATEST ABOUT US</p>
-        <h3>News & Blog</h3>
-    </div>
-    <div class="sub-title">
-        <p>NEWS</p>
-        <h3>License Plat Recognition - LPR</h3>
-    </div>
     <div class="containers">
         <div class="left">
+            <div class="title">
+                <p>GETTING KNOW LATEST ABOUT US</p>
+                <h3>News & Blog</h3>
+            </div>
 
+            <div class="sub-title">
+                <p>{{$data[0]->type}}</p>
+                <h3>{{$data[0]->title}}</h3>
+            </div>
+            <img src="{{Storage::url($data[0]->photo)}}" alt="">
+            <p>{{$data[0]->description}}</p>
+            <a href="/detail/{{$data[0]->id}}">READ MORE <i class="bi bi-chevron-double-right"></i></a>
         </div>
         <div class="right">
-            
+            <div class="sub-title">
+                <h3>RECENT POST</h3>
+            </div>
+            @for ($i = 1; $i < 5; $i++)
+            <a href="/detail/{{$data[$i]->id}}">
+                <div class="items">
+                    <img src="{{Storage::url($data[$i]->photo)}}" alt="">
+                    <div class="rights">
+                        <p>{{date('F j, Y', strtotime($data[$i]->date))}}</p>
+                        <p>{{$data[$i]->title}}</p>
+                    </div>
+                </div>
+            </a>
+            @endfor
         </div>
     </div>
 

@@ -65,8 +65,8 @@
                 <li id="d">
                     <a id="e" href="#">PRODUCTS & SERVICES</a>
                     <ul id="f">
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">Services</a></li>
+                        <li><a href="/product">Products</a></li>
+                        <li><a href="#">Partnes</a></li>
                     </ul>
                 </li>
                 <li>

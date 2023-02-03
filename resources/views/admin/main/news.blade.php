@@ -23,7 +23,7 @@
                 <option value="News">News</option>
                 <option value="Blog">Blog</option>
             </select>
-            <input type="text" name="date" id="date" placeholder="Date">
+            <input type="date" name="date" id="date" placeholder="Date">
 
             <button type="submit">Upload</button>
         </div>

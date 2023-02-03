@@ -286,7 +286,8 @@ body {
 .content-6 .title {
     padding-left: 39px;
     border-left: 5px solid #FF8C39;
-    margin-left: 85px;
+    /* margin-left: 85px; */
+    margin-bottom: 30px;
 }
 
 .content-6 .title p {
@@ -305,6 +306,122 @@ body {
     font-size: 35px;
     line-height: 52px;
     color: #283261;
+}
+
+.content-6 .containers {
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.content-6 .containers .left {
+    width: 50%;
+    position: relative;
+    margin-right: 160px;
+}
+
+.content-6 .containers .left .sub-title p {
+    text-transform: capitalize !important;
+}
+
+.content-6 .left .sub-title {
+    margin-bottom: 15px;
+}
+
+.content-6 .left .sub-title p {
+    font-weight: 600 !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    color: #FF8C39 !important;
+}
+
+.content-6 .left .sub-title h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 127.5%;
+    color: #283261;
+}
+
+.content-6 .containers .left img {
+    width: 100%;
+    max-height: 420px;
+}
+
+.content-6 .containers .left p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: justify;
+
+    color: #84858A;
+}
+
+.content-6 .containers .left a {
+    position: absolute;
+    right: 0;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FF8C39;
+}
+.content-6 .containers .right {
+    margin-top: 73px;
+}
+
+.content-6 .containers .right .sub-title {
+    margin-bottom: 30px;
+}
+
+.content-6 .containers .right .sub-title h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 127.5%;
+    color: #283261;
+    padding-left: 15px;
+    border-left: 5px solid #FF8C39;
+}
+
+.content-6 .containers .right .items {
+    display: flex;
+    margin-bottom: 20px;
+    /* align-items: center; */
+}
+
+.content-6 .containers .right .items .rights p:last-of-type {
+    font-weight: 500 !important;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.content-6 .containers .right .items .rights p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height */
+
+    text-align: justify;
+
+    color: #000000;
+}
+
+
+
+.content-6 .containers .right .items img {
+    width: 200px;
+    max-height: 100px;
+    margin-right: 20px;
 }
 
 
