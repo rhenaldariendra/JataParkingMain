@@ -17,7 +17,7 @@
 
 <div class="content_our_team">
     <div class="left_team">
-        @foreach($news as $data)
+        @foreach($data as $data)
         <h3>{{$data->type}}</h3>
         <h1>{{$data->title}}</h1>
         <img class="img_news" src="{{Storage::url($data->photo)}}" alt="">
@@ -34,14 +34,14 @@
         </div>
         <div class="content_recent">
             @foreach ($news as $data)
-            <div class="bx_content_recent">
+            <a href="/detail/{{$data->id}}" class="bx_content_recent">
 
                 <img src="{{Storage::url($data->photo)}}" alt="">
                 <div class="bx_desc_cr">
-                    <p class="date_cr">February 5, 2019</p>
+                    <p class="date_cr">{{date('F j, Y', strtotime($data->date))}}</p>
                     <p class="desc_cr">{{$data->title}}</p>
                 </div>
-            </div>
+            </a>
             @endforeach
         </div>
     </div>

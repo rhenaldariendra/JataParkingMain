@@ -122,7 +122,38 @@
         <img src="/Assets/Images/graphic.svg" alt="">
     </div>
     <div class="right">
-        {{-- image slider --}}
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="text">
+                    <div class="top">
+                        <img src="/Assets/Images/no1.svg" alt="">
+                        <h3>History</h3>
+                    </div>
+                    <p>Tahun 2000, H. Ahmad Hadi mendirikan PT. Mitra Adiguna Pratama. Sejak itu, perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi. Tahun 2016, bisnis ini dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="text">
+                    <div class="top">
+                        <img src="/Assets/Images/no2.svg" alt="">
+                        <h3>Vision</h3>
+                    </div>
+                    <p>Menjadi perusahaan jasa pengelola parkir yang profesional dengan di dukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi untuk menjadi perusahaan termaju dan terkemuka.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="text">
+                    <div class="top">
+                        <img src="/Assets/Images/no3.svg" alt="">
+                        <h3>Mission</h3>
+                    </div>
+                    <p>Meningkatkan pertumbuhan usaha sehingga dapat memberikan hasil terbaik bagi mitra usaha, pengguna jasa dan karyawan yang profesional. Meningkatkan mutu layanan yang berorientasi kepada kepuasan pengguna jasa dan meningkatkan koordinasi dengan mitra usaha.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
 </div>
 
@@ -135,28 +166,28 @@
             </div>
 
             <div class="sub-title">
-                <p>{{$data[0]->type}}</p>
-                <h3>{{$data[0]->title}}</h3>
+                <p>{{$top->type}}</p>
+                <h3>{{$top->title}}</h3>
             </div>
-            <img src="{{Storage::url($data[0]->photo)}}" alt="">
-            <p>{{$data[0]->description}}</p>
-            <a href="/detail/{{$data[0]->id}}">READ MORE <i class="bi bi-chevron-double-right"></i></a>
+            <img src="{{Storage::url($top->photo)}}" alt="">
+            <p>{{$top->description}}</p>
+            <a href="/detail/{{$top->id}}">READ MORE <i class="bi bi-chevron-double-right"></i></a>
         </div>
         <div class="right">
             <div class="sub-title">
                 <h3>RECENT POST</h3>
             </div>
-            @for ($i = 1; $i < 5; $i++)
-            <a href="/detail/{{$data[$i]->id}}">
-                <div class="items">
-                    <img src="{{Storage::url($data[$i]->photo)}}" alt="">
-                    <div class="rights">
-                        <p>{{date('F j, Y', strtotime($data[$i]->date))}}</p>
-                        <p>{{$data[$i]->title}}</p>
+            @foreach ($data as $key)
+                <a href="/detail/{{$key->id}}">
+                    <div class="items">
+                        <img src="{{Storage::url($key->photo)}}" alt="">
+                        <div class="rights">
+                            <p>{{date('F j, Y', strtotime($key->date))}}</p>
+                            <p>{{$key->title}}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-            @endfor
+                </a>
+            @endforeach
         </div>
     </div>
 
@@ -218,6 +249,29 @@
         speed: 900,
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
     });
+
+    //
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        //   dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
 
 </script>
 @endsection

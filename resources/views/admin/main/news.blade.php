@@ -45,7 +45,7 @@
             <textarea disabled>{{$data->description}}</textarea>
             <label for="">Location of Project</label>
             <input type="text" value="{{$data->type}}" disabled>
-            <form action="/admin/project/delete/{{$data->id}}" method="POST">
+            <form action="/admin/news/delete/{{$data->id}}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="delete" type="submit">Delete</button>

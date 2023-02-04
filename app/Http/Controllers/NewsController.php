@@ -8,12 +8,14 @@ use Illuminate\Http\Request;
 class NewsController extends Controller
 {
     public function getNews(){
-        $news = News::latest()->inRandomOrder()->limit(4)->get();
-        return view('main.news', ['news' => $news, 'news' => $news]);
+        $news = News::latest()->limit(4)->get();
+        $data = News::all();
+        return view('main.news', ['news' => $news, 'data' => $data]);
     }
     public function getDetailNews($id) {
+        $data = News::latest()->limit(4)->get();
         $news = News::find($id);
-        return view('main.detailnews', ['news' => $news, 'news' => $news]);
+        return view('main.detailnews', ['news' => $news, 'data' => $data]);
     }
 
 }

@@ -66,7 +66,7 @@
                     <a id="e" href="#">PRODUCTS & SERVICES</a>
                     <ul id="f">
                         <li><a href="/product">Products</a></li>
-                        <li><a href="#">Partnes</a></li>
+                        <li><a href="/partner">Partnes</a></li>
                     </ul>
                 </li>
                 <li>

@@ -22,9 +22,6 @@
         <a href="/logout"><i class="bi bi-save"></i></a>
     </div>
     <div class="navigation-content">
-        <a href="/admin/project">Projects</a>
-        <a href="/admin/category">Projects Categories</a>
-        <a href="/admin/teams">Teams</a>
         <a href="/admin/news">News & Blogs</a>
     </div>
 

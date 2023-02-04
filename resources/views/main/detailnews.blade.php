@@ -29,15 +29,16 @@
             <h1 style="padding-left: 25px;">Recent Post</h1>
         </div>
         <div class="content_recent">
-            <div class="bx_content_recent">
+            @foreach ($data as $data)
+            <a href="/detail/{{$data->id}}" class="bx_content_recent">
 
-                <img src="{{Storage::url($news->photo)}}" alt="">
+                <img src="{{Storage::url($data->photo)}}" alt="">
                 <div class="bx_desc_cr">
-                    <p class="date_cr">February 5, 2019</p>
-                    <p class="desc_cr">{{$news->title}}</p>
+                    <p class="date_cr">{{date('F j, Y', strtotime($data->date))}}</p>
+                    <p class="desc_cr">{{$data->title}}</p>
                 </div>
-            </div>
-
+            </a>
+            @endforeach
         </div>
     </div>
 </div>

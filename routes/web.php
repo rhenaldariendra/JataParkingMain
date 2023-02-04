@@ -39,6 +39,12 @@ Route::get('/product', function () {
 Route::get('/project', function () {
     return view('main.project');
 });
+Route::get('/project', function () {
+    return view('main.project');
+});
+Route::get('/partner', function () {
+    return view('main.partner');
+});
 
 Route::group(['middleware'=>['auth']], function(){
     Route::group(['middleware'=>['admin']], function(){

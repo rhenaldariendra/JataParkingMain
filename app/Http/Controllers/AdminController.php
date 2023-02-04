@@ -136,5 +136,14 @@ class AdminController extends Controller
         $data->delete();
         return redirect()->back();
     }
+    public function deleteNews($id) {
+        $data = News::find($id);
+        // dd($data);
+        Storage::delete('public/'.$data->photo);
+        $data->delete();
+        return redirect()->back();
+    }
+
+
 
 }
