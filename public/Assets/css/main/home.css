@@ -14,7 +14,7 @@ body {
 .slider {
     content: ' ';
     height: 75vh;
-    background-color: #A9ABB3;
+    /* background-color: #A9ABB3; */
 }
 
 .content-2 {
@@ -516,4 +516,255 @@ body {
     .slideshow-text {
         font-size: 40px;
     }
+}
+
+
+
+
+/* Slider style */
+.cd-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.cd-slider.ie9 nav div span {
+    display: none;
+}
+
+.cd-slider ul li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: visibility 0s .6s;
+}
+
+.cd-slider ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    width: 135vh;
+    height: 135vh;
+    border: solid rgba(0, 0, 0, 0.2);
+    border-width: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: border-width .4s .6s;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50% 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    mix-blend-mode: lighten;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: opacity .4s .6s, transform .4s .6s;
+}
+
+.content blockquote {
+    z-index: 2;
+    max-width: 45%;
+}
+
+blockquote p {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+blockquote span {
+    font-size: 1.4rem;
+}
+
+.satu blockquote {
+    position: absolute;
+    left: 17%;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.satu blockquote h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 112.02%;
+    color: #FFFFFF;
+}
+
+
+blockquote a{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.035em;
+    color: #FFFFFF;
+    padding: 12px 15px;
+    background-color: #FF8C39;
+}
+
+.satu blockquote p{
+    margin-top: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #FFFFFF;
+}
+
+.dua blockquote {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 50%;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dua blockquote p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 15px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+.dua blockquote p:not(:last-of-type){
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.dua blockquote h3{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 112.02%;
+    color: #FFFFFF;
+}
+
+
+/* current slide
+  ---------------------------------*/
+.cd-slider li.current_slide {
+    visibility: visible;
+}
+
+.cd-slider li.current_slide::before {
+    border-width: 16rem;
+}
+
+.cd-slider li.current_slide .content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* nav
+  ---------------------------------*/
+nav div {
+    position: absolute;
+    top: 50%;
+    width: 5rem;
+    height: 5rem;
+    margin-top: -2.5rem;
+    list-style: none;
+}
+
+nav div:not(:last-of-type) {
+    left: 2%;
+}
+
+nav div:last-of-type {
+    /* left: 0; */
+    right: 0;
+}
+
+.prev,
+.next {
+    position: relative;
+    z-index: 100;
+    width: 70%;
+    height: 70%;
+    display: block;
+    border-radius: 100%;
+    transition: box-shadow .3s;
+}
+
+.prev::before,
+.prev::after,
+.next::before,
+.next::after {
+    content: '';
+    position: absolute;
+    left: 43%;
+    background: #fff;
+    width: .4rem;
+    min-width: 3px;
+    border-radius: 3px;
+    height: 34%;
+}
+
+.prev::before {
+    transform: rotate(45deg);
+    top: 24%;
+}
+
+.prev::after {
+    transform: rotate(-45deg);
+    bottom: 24%;
+}
+
+.next::before,
+.next::after {
+    left: auto;
+    right: 43%;
+}
+
+.next::before {
+    transform: rotate(-45deg);
+    top: 24%;
+}
+
+.next::after {
+    transform: rotate(45deg);
+    bottom: 24%;
+}
+
+.prev:hover,
+.next:hover {
+    box-shadow: 0 0 0 1rem rgba(0, 0, 0, 0.15);
+}
+
+nav>div>span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    z-index: 5;
+    pointer-events: none;
+    will-change: width, height;
+    transform: translate(-50%, -50%);
+    transition: width .6s, height .6s;
 }

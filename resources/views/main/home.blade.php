@@ -8,7 +8,35 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
 <link rel="stylesheet" href="/Assets/css/main/home.css">
 
-<div class="slider"> </div>
+<div class="slider">
+    <section class="cd-slider">
+        <ul>
+            <li>
+                <div class="content satu" style="background-image:url('/Assets/Images/slider1.svg')">
+                    <blockquote>
+                        <h3>Welcome to Jataparking</h3>
+                        <p><i class="bi bi-dot"></i> Profesional <i class="bi bi-dot"></i> Inovatif</p>
+                        <a href="#">VIEW MORE DETAILS</a>
+                    </blockquote>
+                </div>
+            </li>
+            <li>
+                <div class="content dua" style="background-image:url('/Assets/Images/slider2.svg">
+                    <blockquote>
+                        <h3>We are Always Ready to Service</h3>
+                        <p>For immediate Services Dial</p>
+                        <p style="color:#FF8C39">021 2148 7710</p>
+                        <a href="#">VIEW MORE DETAILS</a>
+                    </blockquote>
+                </div>
+            </li>
+        </ul>
+        <nav>
+            <div><a class="prev" href="#"></a></div>
+            <div><a class="next" href="#"></a></div>
+        </nav>
+    </section>
+</div>
 
 <div class="content-2">
     <div class="items">
@@ -274,4 +302,144 @@
     }
 
 </script>
+<script>
+    (function () {
+
+        var autoUpdate = false,
+            timeTrans = 4000;
+
+        var cdSlider = document.querySelector('.cd-slider'),
+            item = cdSlider.querySelectorAll("li"),
+            nav = cdSlider.querySelector("nav");
+
+        item[0].className = "current_slide";
+
+        for (var i = 0, len = item.length; i < len; i++) {
+            var color = item[i].getAttribute("data-color");
+            item[i].style.backgroundColor = color;
+        }
+
+        // Detect IE
+        // hide ripple effect on IE9
+        var ua = window.navigator.userAgent;
+        var msie = ua.indexOf("MSIE");
+        if (msie > 0) {
+            var version = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
+            if (version === 9) {
+                cdSlider.className = "cd-slider ie9";
+            }
+        }
+
+        if (item.length <= 1) {
+            nav.style.display = "none";
+        }
+
+        function prevSlide() {
+            var currentSlide = cdSlider.querySelector("li.current_slide"),
+                prevElement = currentSlide.previousElementSibling,
+                prevSlide = (prevElement !== null) ? prevElement : item[item.length - 1],
+                prevColor = prevSlide.getAttribute("data-color"),
+                el = document.createElement('span');
+
+            currentSlide.className = "";
+            prevSlide.className = "current_slide";
+
+            nav.children[0].appendChild(el);
+
+            var size = (cdSlider.clientWidth >= cdSlider.clientHeight) ? cdSlider.clientWidth * 2 : cdSlider
+                .clientHeight * 2,
+                ripple = nav.children[0].querySelector("span");
+
+            ripple.style.height = size + 'px';
+            ripple.style.width = size + 'px';
+            ripple.style.backgroundColor = prevColor;
+
+            ripple.addEventListener("webkitTransitionEnd", function () {
+                if (this.parentNode) {
+                    this.parentNode.removeChild(this);
+                }
+            });
+
+            ripple.addEventListener("transitionend", function () {
+                if (this.parentNode) {
+                    this.parentNode.removeChild(this);
+                }
+            });
+
+        }
+
+        function nextSlide() {
+            var currentSlide = cdSlider.querySelector("li.current_slide"),
+                nextElement = currentSlide.nextElementSibling,
+                nextSlide = (nextElement !== null) ? nextElement : item[0],
+                nextColor = nextSlide.getAttribute("data-color"),
+                el = document.createElement('span');
+
+            currentSlide.className = "";
+            nextSlide.className = "current_slide";
+
+            nav.children[1].appendChild(el);
+
+            var size = (cdSlider.clientWidth >= cdSlider.clientHeight) ? cdSlider.clientWidth * 2 : cdSlider
+                .clientHeight * 2,
+                ripple = nav.children[1].querySelector("span");
+
+            ripple.style.height = size + 'px';
+            ripple.style.width = size + 'px';
+            ripple.style.backgroundColor = nextColor;
+
+            ripple.addEventListener("webkitTransitionEnd", function () {
+                if (this.parentNode) {
+                    this.parentNode.removeChild(this);
+                }
+            });
+
+            ripple.addEventListener("transitionend", function () {
+                if (this.parentNode) {
+                    this.parentNode.removeChild(this);
+                }
+            });
+
+        }
+
+        updateNavColor();
+
+        function updateNavColor() {
+            var currentSlide = cdSlider.querySelector("li.current_slide");
+
+            var nextColor = (currentSlide.nextElementSibling !== null) ? currentSlide.nextElementSibling
+                .getAttribute("data-color") : item[0].getAttribute("data-color");
+            var prevColor = (currentSlide.previousElementSibling !== null) ? currentSlide.previousElementSibling
+                .getAttribute("data-color") : item[item.length - 1].getAttribute("data-color");
+
+            if (item.length > 2) {
+                nav.querySelector(".prev").style.backgroundColor = prevColor;
+                nav.querySelector(".next").style.backgroundColor = nextColor;
+            }
+        }
+
+        nav.querySelector(".next").addEventListener('click', function (event) {
+            event.preventDefault();
+            nextSlide();
+            updateNavColor();
+        });
+
+        nav.querySelector(".prev").addEventListener("click", function (event) {
+            event.preventDefault();
+            prevSlide();
+            updateNavColor();
+        });
+
+        //autoUpdate
+        setInterval(function () {
+            if (autoUpdate) {
+                nextSlide();
+                updateNavColor();
+            };
+        }, timeTrans);
+
+    })();
+
+</script>
+
 @endsection

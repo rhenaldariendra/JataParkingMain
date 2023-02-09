@@ -6,104 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/Assets/css/test.css">
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
-    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.12/jquery.mousewheel.js"></script> --}}
     <title>Document</title>
 </head>
 
 <body>
-    <div class="parent">
-        <div class="split-slideshow">
-            
-            <div class="slideshow">
-                <div class="slider">
-                    <div class="item">
-                        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-2.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-3.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-4.jpg" />
-                    </div>
-                    <div class="item">
-                        <img src="https://raw.githubusercontent.com/supahfunk/supah-codepen/master/canyon-1.jpg" />
-                    </div>
+    <section class="cd-slider">
+        <ul>
+            <li>
+                <div class="content satu" style="background-image:url('/Assets/Images/slider1.svg')">
+                    <blockquote>
+                        <p>Welcome to Jataparking</p>
+                        <a href="#">VIEW MORE DETAILS</a>
+                    </blockquote>
                 </div>
-            </div>
-            <div class="slideshow-text">
-                <div class="item">Canyon</div>
-                <div class="item">Desert</div>
-                <div class="item">Erosion</div>
-                <div class="item">Shape</div>
-            </div>
-        </div>
-    </div>
-    <div class="test">
-
-
-        <h1>asdasdadasd</h1>
-    </div>
+            </li>
+            <li>
+                <div class="content dua" style="background-image:url('/Assets/Images/slider2.svg">
+                    <blockquote>
+                        <p>We are Always Ready to Service</p>
+                        <span>For immediate Services Dial</span>
+                        <span style="color:#FF8C39">021 2148 7710</span>
+                        <a href="#">VIEW MORE DETAILS</a>
+                    </blockquote>
+                </div>
+            </li>
+        </ul>
+        <nav>
+            <div><a class="prev" href="#"></a></div>
+            <div><a class="next" href="#"></a></div>
+        </nav>
+    </section>
 
     <script>
-        var $slider = $('.slideshow .slider'),
-            maxItems = $('.item', $slider).length,
-            dragging = false,
-            tracking,
-            rightTracking;
+        (function () {
 
-        $sliderRight = $('.slideshow').clone().addClass('slideshow-right').appendTo($('.split-slideshow'));
+            var autoUpdate = false,
+                timeTrans = 4000;
 
-        rightItems = $('.item', $sliderRight).toArray();
-        reverseItems = rightItems.reverse();
-        $('.slider', $sliderRight).html('');
-        for (i = 0; i < maxItems; i++) {
-            $(reverseItems[i]).appendTo($('.slider', $sliderRight));
-        }
+            var cdSlider = document.querySelector('.cd-slider'),
+                item = cdSlider.querySelectorAll("li"),
+                nav = cdSlider.querySelector("nav");
 
-        $slider.addClass('slideshow-left');
-        $('.slideshow-left').slick({
-            vertical: true,
-            verticalSwiping: true,
-            arrows: false,
-            infinite: true,
-            dots: true,
-            speed: 1000,
-            cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            item[0].className = "current_slide";
 
-            if (currentSlide > nextSlide && nextSlide == 0 && currentSlide == maxItems - 1) {
-                $('.slideshow-right .slider').slick('slickGoTo', -1);
-                $('.slideshow-text').slick('slickGoTo', maxItems);
-            } else if (currentSlide < nextSlide && currentSlide == 0 && nextSlide == maxItems - 1) {
-                $('.slideshow-right .slider').slick('slickGoTo', maxItems);
-                $('.slideshow-text').slick('slickGoTo', -1);
-            } else {
-                $('.slideshow-right .slider').slick('slickGoTo', maxItems - 1 - nextSlide);
-                $('.slideshow-text').slick('slickGoTo', nextSlide);
+            for (var i = 0, len = item.length; i < len; i++) {
+                var color = item[i].getAttribute("data-color");
+                item[i].style.backgroundColor = color;
             }
-        });
 
-        $('.slideshow-right .slider').slick({
-            swipe: false,
-            vertical: true,
-            arrows: false,
-            infinite: true,
-            speed: 950,
-            cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-            initialSlide: maxItems - 1
-        });
-        $('.slideshow-text').slick({
-            swipe: false,
-            vertical: true,
-            arrows: false,
-            infinite: true,
-            speed: 900,
-            cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
-        });
+            // Detect IE
+            // hide ripple effect on IE9
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf("MSIE");
+            if (msie > 0) {
+                var version = parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)));
+                if (version === 9) {
+                    cdSlider.className = "cd-slider ie9";
+                }
+            }
+
+            if (item.length <= 1) {
+                nav.style.display = "none";
+            }
+
+            function prevSlide() {
+                var currentSlide = cdSlider.querySelector("li.current_slide"),
+                    prevElement = currentSlide.previousElementSibling,
+                    prevSlide = (prevElement !== null) ? prevElement : item[item.length - 1],
+                    prevColor = prevSlide.getAttribute("data-color"),
+                    el = document.createElement('span');
+
+                currentSlide.className = "";
+                prevSlide.className = "current_slide";
+
+                nav.children[0].appendChild(el);
+
+                var size = (cdSlider.clientWidth >= cdSlider.clientHeight) ? cdSlider.clientWidth * 2 : cdSlider
+                    .clientHeight * 2,
+                    ripple = nav.children[0].querySelector("span");
+
+                ripple.style.height = size + 'px';
+                ripple.style.width = size + 'px';
+                ripple.style.backgroundColor = prevColor;
+
+                ripple.addEventListener("webkitTransitionEnd", function () {
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
+                });
+
+                ripple.addEventListener("transitionend", function () {
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
+                });
+
+            }
+
+            function nextSlide() {
+                var currentSlide = cdSlider.querySelector("li.current_slide"),
+                    nextElement = currentSlide.nextElementSibling,
+                    nextSlide = (nextElement !== null) ? nextElement : item[0],
+                    nextColor = nextSlide.getAttribute("data-color"),
+                    el = document.createElement('span');
+
+                currentSlide.className = "";
+                nextSlide.className = "current_slide";
+
+                nav.children[1].appendChild(el);
+
+                var size = (cdSlider.clientWidth >= cdSlider.clientHeight) ? cdSlider.clientWidth * 2 : cdSlider
+                    .clientHeight * 2,
+                    ripple = nav.children[1].querySelector("span");
+
+                ripple.style.height = size + 'px';
+                ripple.style.width = size + 'px';
+                ripple.style.backgroundColor = nextColor;
+
+                ripple.addEventListener("webkitTransitionEnd", function () {
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
+                });
+
+                ripple.addEventListener("transitionend", function () {
+                    if (this.parentNode) {
+                        this.parentNode.removeChild(this);
+                    }
+                });
+
+            }
+
+            updateNavColor();
+
+            function updateNavColor() {
+                var currentSlide = cdSlider.querySelector("li.current_slide");
+
+                var nextColor = (currentSlide.nextElementSibling !== null) ? currentSlide.nextElementSibling
+                    .getAttribute("data-color") : item[0].getAttribute("data-color");
+                var prevColor = (currentSlide.previousElementSibling !== null) ? currentSlide.previousElementSibling
+                    .getAttribute("data-color") : item[item.length - 1].getAttribute("data-color");
+
+                if (item.length > 2) {
+                    nav.querySelector(".prev").style.backgroundColor = prevColor;
+                    nav.querySelector(".next").style.backgroundColor = nextColor;
+                }
+            }
+
+            nav.querySelector(".next").addEventListener('click', function (event) {
+                event.preventDefault();
+                nextSlide();
+                updateNavColor();
+            });
+
+            nav.querySelector(".prev").addEventListener("click", function (event) {
+                event.preventDefault();
+                prevSlide();
+                updateNavColor();
+            });
+
+            //autoUpdate
+            setInterval(function () {
+                if (autoUpdate) {
+                    nextSlide();
+                    updateNavColor();
+                };
+            }, timeTrans);
+
+        })();
 
     </script>
 </body>

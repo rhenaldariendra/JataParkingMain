@@ -20,7 +20,6 @@ class ViewController extends Controller
             }
             $idx++;
         }
-        // dd($top);
 
         return view('main.home', ['top' => $data[0], 'data' => $top]);
     }
