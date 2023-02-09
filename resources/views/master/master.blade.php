@@ -104,8 +104,7 @@
             <div class="info">
                 <div class="title">
                     <p> Work Days</p>
-                    <p>Monday–Friday: 9:00AM–5:00PM<br>
-                        Saturday & Sunday: 11:00AM–3:00PM</p>
+                    <p>Monday–Friday: 9:00AM–5:00PM</p>
                 </div>
             </div>
 
@@ -120,7 +119,7 @@
 
             <div class="contact">
                 <p>For Emmediate Services Dial</p>
-                <p class="phone">021 2148 7710</p>
+                <p class="phone">(+62)21 21487710</p>
                 <p>email : info@jataparking.com</p>
             </div>
 

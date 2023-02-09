@@ -15,7 +15,7 @@
     </div>
 </div>
 <div class="map"></div>
-    <iframe src="https://maps.google.com/maps?q=jl.%20tipar&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe class="gmap_iframe" width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Multi Adiguna Pratama&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 </div>
 <div class="content_contactus">
     <div class="left_contactus">
@@ -32,7 +32,7 @@
                 <input type="text" id="email" name="email" placeholder="Email">
             </div>
             <div class="sub_input">
-                <input type="text" id="subject" name="subject" placeholder="Subject"> 
+                <input type="text" id="subject" name="subject" placeholder="Subject">
             </div>
             <div class="sub_input">
                 <textarea name="messeges" id="messeges" cols="30" rows="10" placeholder="Messeges"></textarea>
@@ -50,17 +50,16 @@
         <div class="ct_right_contactus">
             <div class="bx3">
                 <h3>Address</h3>
-                <p>Ruko Cordoba Blok F No. 23 Jl. Marina Raya, Kamal Muara Jakarta Utara 14470</p>
+                <p>Jl. Raya Tipar Cakung No.139, Sukapura, Cilincing, Jakarta Utara</p>
             </div>
             <div class="bx3">
                 <h3>Hours of Service</h3>
                 <p>Monday–Friday: 9:00AM–5:00PM</p>
-                <p>Saturday & Sunday: 11:00AM–3:00PM</p>
             </div>
             <div class="bx3">
                 <h3>Services</h3>
                 <p>info@jataparking.com</p>
-                <p>(+62)21 2903 3426</p>
+                <p>(+62)21 21487710</p>
             </div>
         </div>
     </div>

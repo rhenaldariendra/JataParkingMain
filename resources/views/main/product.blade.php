@@ -27,7 +27,7 @@
             </div>
             <div class="items">
                 <i class="bi bi-chevron-double-right"></i>
-                <p>Easy Maintanance</p>
+                <p>Easy Maintenance</p>
             </div>
             <div class="items">
                 <i class="bi bi-chevron-double-right"></i>

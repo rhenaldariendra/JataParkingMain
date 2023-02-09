@@ -14,6 +14,11 @@
         <p style=" color: #FFFFFF">/</p><p style=" color: #FF8C39;">Company Profile</p>
     </div>
 </div>
+{{-- <div class="img_head_aboutus">
+    <h3>Welcome to Jataparking</h3>
+    <p>Make Sure Your Vehicle Safety</p>
+    <div class="line"></div>
+</div> --}}
 <div class="under_head_aboutus">
     <h1 class="uha_h">We Work Hard And Make Sure Your Vehicle Safety</h1>
     <p class="uha_p">Friendly customer service staff for your all questions!</p>
@@ -28,7 +33,7 @@
     <div class="sub1_ct_aboutus">
         <img src="/Assets/Images/ex-company.svg" alt="">
         <div class="desc_content" style="padding-top: 20px; padding-left: 82px;">
-            <p class="wlcm">Welcome to Jayaparking</p>
+            <p class="wlcm">Welcome to Jataparking</p>
             <div class="bx_bluebig">
                 <h1 class="bluebig">We Have 20+ Years Experiance</h1>
             </div>
@@ -42,7 +47,7 @@
         <div class="container_aboutus">
             <img src="/Assets/Images/flag-white.svg" alt="">
             <h2 class="blue_small">Our History</h2>
-            <p>Tahun 2000, H. Ahmad Hadi mendirikan PT. Mitra Adiguna Pratama. Sejak itu,
+            <p>Tahun 2005, Veni Liu mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
                 perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang
                 profesional yang didukung sistem teknologi modern serta sumber daya manusia
                 berkompetensi tinggi. Tahun 2016, bisnis ini dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
