@@ -119,7 +119,7 @@ h1, h2, h3, h4, h5, h6, p, a{
 
 .left_team img{
     width: 100%;
-    height: 450px;
+    height: 500px;
 }
 
 .left_team p{
@@ -181,4 +181,152 @@ h1, h2, h3, h4, h5, h6, p, a{
     color: #000000;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.bx_rt_cr h1{
+    padding-left: 25px;
+}
+
+@media screen and (max-width:1024px){
+    .head_news{
+        height: 110px;
+    }
+
+    .under_head_news{
+        height: 230px;
+    }
+
+    .head_news h1{
+        font-size: 24px;
+        padding-left: 15px;
+    }
+
+    .head_news img{
+        height: 80%;
+    }
+
+    .sub1_head_news{
+        padding-top: 10px;
+    }
+
+    .sub2_head_news{
+        padding-top:0;
+    }
+    .sub2_head_news p{
+        font-size: 12px;
+    }
+
+    .left_team img{
+        height: 400px
+    }
+    .content_recent img{
+        width: 70px;
+        height: 70px;
+
+    }
+
+    .bx_rt_cr img{
+        height: 40px;
+    }
+
+    .content_our_team h1{
+        font-size:25px;
+    }
+
+    .content_our_team p{
+        font-size:12px;
+    }
+
+    .content_our_team h3{
+        font-size: 15px;
+    }
+
+    .bx_rt_cr h1{
+        padding-left: 18px;
+    }
+
+    .left_team p{
+        padding: 12px 0;
+    }
+
+    .left_team a{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .head_news{
+        height: 90px;
+    }
+
+    .under_head_news{
+        height: 230px;
+    }
+
+    .head_news h1{
+        font-size: 20px;
+        padding-left: 13px;
+    }
+
+    .head_news img{
+        height: 60%;
+    }
+
+    .sub1_head_news{
+        padding: 5px 0 3px 45px
+    }
+
+    .sub2_head_news{
+        padding-top:0;
+        padding-left: 45px;
+    }
+
+    .sub2_head_news p{
+        font-size: 10px;
+    }
+
+    .right_team {
+        width: 34%;
+    }
+
+    .left_team img{
+        height: 280px
+    }
+    .content_recent img{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .bx_rt_cr img{
+        height: 30px;
+    }
+
+    .content_our_team h1{
+        font-size:22px;
+    }
+
+    .content_our_team p{
+        font-size:10px;
+    }
+
+    .content_our_team h3{
+        font-size: 13px;
+    }
+
+    .bx_rt_cr h1{
+        padding-left: 16px;
+    }
+
+    .left_team p{
+        padding: 8px 0;
+    }
+
+    .left_team a{
+        font-size: 12px;
+    }
+
+    .left_team h1{
+        padding-bottom: 0px;
+    }
 }

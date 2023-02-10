@@ -14,14 +14,14 @@
         <p style=" color: #FFFFFF">/</p><p style=" color: #FF8C39;">Contact Us</p>
     </div>
 </div>
-<div class="map"></div>
-<iframe class="gmap_iframe" width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Multi Adiguna Pratama&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+<div class="map">
+<iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Multi Adiguna Pratama&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
 </div>
 <div class="content_contactus">
     <div class="left_contactus">
         <div class="bx1">
             <img src="/Assets/Images/line-contactus.svg" alt="">
-            <h2 class="cf" style="padding-left: 25px;">Contact</h2>
+            <h2 class="cf">Contact</h2>
         </div>
         <p>Use the form below to drop us an-email, Feel free to contact us by telephone/whatsapp or email and we will be sure to get back to you as soon as possible.</p>
         <form action="/action_page.php">
@@ -44,7 +44,7 @@
     </div>
     <div class="right_contactus">
         <div class="bx2">
-            <h2 class="cf" style="padding-right: 25px;">Find Us</h2>
+            <h2 class="cf">Find Us</h2>
             <img src="/Assets/Images/line-contactus.svg" alt="">
         </div>
         <div class="ct_right_contactus">

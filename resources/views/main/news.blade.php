@@ -30,7 +30,7 @@
     <div class="right_team">
         <div class="bx_rt_cr">
             <img src="/Assets/Images/line-recent.svg" alt="">
-            <h1 style="padding-left: 25px;">Recent Post</h1>
+            <h1>Recent Post</h1>
         </div>
         <div class="content_recent">
             @foreach ($news as $data)

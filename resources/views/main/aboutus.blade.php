@@ -23,16 +23,16 @@
     <h1 class="uha_h">We Work Hard And Make Sure Your Vehicle Safety</h1>
     <p class="uha_p">Friendly customer service staff for your all questions!</p>
     <div class="call_icon_aboutus">
-        <img src="/Assets/Images/line-call-grey.svg" alt="">
-        <img src="/Assets/Images/telephone.svg" alt="" style="padding: 0 15px;">
-        <img src="/Assets/Images/line-call-grey.svg" alt="">
+        <img class="line_call" src="/Assets/Images/line-call-grey.svg" alt="">
+        <img class="img_call" src="/Assets/Images/telephone.svg" alt="" style="padding: 0 15px;">
+        <img class="line_call" src="/Assets/Images/line-call-grey.svg" alt="">
     </div>
     <p class="csnumber">CS: 021 2148-7710</p>
 </div>
 <div class="content_aboutus">
     <div class="sub1_ct_aboutus">
-        <img src="/Assets/Images/ex-company.svg" alt="">
-        <div class="desc_content" style="padding-top: 20px; padding-left: 82px;">
+        <img class="comp_img" src="/Assets/Images/ex-company.svg" alt="">
+        <div class="desc_content">
             <p class="wlcm">Welcome to Jataparking</p>
             <div class="bx_bluebig">
                 <h1 class="bluebig">We Have 20+ Years Experiance</h1>
