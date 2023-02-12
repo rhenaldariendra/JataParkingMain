@@ -321,3 +321,190 @@ h1, h2, h3, h4, h5, h6, p, a{
         padding-bottom: 0px;
     }
 }
+
+@media screen and (max-width:425px){
+    .head_detailnews{
+        height: 50px;
+        display: flex;
+        flex-direction: horizontal;
+        align-items: center;
+    }
+
+    .sub1_head_detailnews img{
+        display: none;
+    }
+
+    .sub2_head_detailnews{
+        display: none;
+    }
+
+    .under_head_detailnews{
+        height: 180px;
+    }
+
+    .head_detailnews h1{
+        font-size: 15px;
+        padding: 0;;
+    }
+
+    .head_detailnews img{
+        height: 60%;
+    }
+
+    .sub1_head_detailnews{
+        padding: 0;
+    }
+
+    .sub2_head_detailnews{
+        padding-top:0;
+        padding-left: 45px;
+    }
+
+    .sub2_head_detailnews p{
+        font-size: 10px;
+    }
+
+    .right_team {
+        display: none;
+    }
+
+    .left_team{
+        width: 100%;
+    }
+
+    .left_team img{
+        height: 280px
+    }
+    .content_recent img{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .bx_rt_cr img{
+        height: 30px;
+    }
+
+    .content_our_team h1{
+        font-size:22px;
+    }
+
+    .content_our_team p{
+        font-size:10px;
+    }
+
+    .content_our_team h3{
+        font-size: 13px;
+    }
+
+    .bx_rt_cr h1{
+        padding-left: 16px;
+    }
+
+    .left_team p{
+        padding: 8px 0;
+    }
+
+    .left_team a{
+        font-size: 12px;
+    }
+
+    .left_team h1{
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .head_detailnews{
+        height: 50px;
+        display: flex;
+        flex-direction: horizontal;
+        align-items: center;
+    }
+
+    .sub1_head_detailnews img{
+        display: none;
+    }
+
+    .sub2_head_detailnews{
+        display: none;
+    }
+
+    .under_head_detailnews{
+        height: 180px;
+    }
+
+    .head_detailnews h1{
+        font-size: 15px;
+        padding: 0;;
+    }
+
+    .head_detailnews img{
+        height: 60%;
+    }
+
+    .sub1_head_detailnews{
+        padding: 0;
+    }
+
+    .sub2_head_detailnews{
+        padding-top:0;
+        padding-left: 45px;
+    }
+
+    .sub2_head_detailnews p{
+        font-size: 10px;
+    }
+
+    .right_team {
+        display: none;
+    }
+
+    .left_team{
+        width: 100%;
+    }
+
+    .left_team h3{
+        font-size: 12px;
+        line-height: 1.5em;
+    }
+
+    .left_team img{
+        height: 200px
+    }
+    .content_recent img{
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .bx_rt_cr img{
+        height: 30px;
+    }
+
+    .content_our_team{padding: 20px 50px;}
+
+    .content_our_team h1{
+        font-size:18px;
+    }
+
+    .content_our_team p{
+        font-size:10px;
+    }
+
+    .bx_rt_cr h1{
+        padding-left: 16px;
+    }
+
+    .left_team p{
+        padding: 4px 0;
+    }
+
+    .left_team a{
+        font-size: 12px;
+    }
+
+    .left_team h1{
+        padding-bottom: 0px;
+    }
+}
