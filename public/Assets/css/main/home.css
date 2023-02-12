@@ -6,15 +6,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    overflow-x: hidden;
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: 'Poppins', sans-serif;
 }
 
+/* body {
+    overflow-x: hidden;
+} */
+
 .slider {
-    content: ' ';
+    content: '';
     height: 75vh;
-    /* background-color: #A9ABB3; */
 }
 
 .content-2 {
@@ -511,16 +513,6 @@ body {
     margin-right: 20px;
 }
 
-
-@media (max-width: 767px) {
-    .slideshow-text {
-        font-size: 40px;
-    }
-}
-
-
-
-
 /* Slider style */
 .cd-slider {
     position: relative;
@@ -768,3 +760,93 @@ nav>div>span {
     transform: translate(-50%, -50%);
     transition: width .6s, height .6s;
 }
+
+@media (max-width: 767px) {
+    .slideshow-text {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 1250px){
+    .content-2 .items {
+        width: 290px;
+        height: 270px;
+    }
+    .content-2 .items h3{
+        font-size: 16px;
+    }
+
+    .content-2 .items p {
+        font-size: 12px;
+    }
+
+    .content-3 .bottom .items {
+        margin: 0 10px;
+    }
+    .content-3 .top .left img {
+        width: 100%;
+    }
+    .content-3 .top .left {
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 985px){
+    .content-2 {
+        box-sizing: border-box;
+        padding: 0 20px;
+    }
+    .content-2 .items {
+        margin: 0 0;
+    }
+    .content-2 .items h3{
+        font-size: 14px;
+    }
+
+    .content-3 .top .left {
+        width: 250px;
+    }
+    .content-3 .top .right {
+        margin-left: 30px;
+        width: 450px;
+    }
+    .content-3 .top .right h3 {
+        font-size: 28px;
+    }
+    .content-3 .bottom .items {
+        width: 200px;
+        /* margin: 0 0; */
+    }
+    .content-3 .bottom .items p {
+        font-size: 16px;
+    }
+    .content-3 .bottom .items i {
+        font-size: 40px;
+    }
+
+    .content-4 .lefts {
+        width: 75%;
+    }
+    .content-5 {
+        flex-direction: column;
+        height: fit-content;
+        width: 100%;
+        background: linear-gradient(180deg, #5E3AA4 47.31%, rgba(94, 58, 164, 0.719925) 80.92%, rgba(94, 58, 164, 0.509046) 90%, rgba(94, 58, 164, 0) 100%);
+        align-items: center;
+    }
+    .content-5 .right {
+        width: 90%;
+        height: 350px;
+    }
+    .text{
+        margin-top: 30px;
+    }
+    .text p{
+        width: 100%;
+        text-align: justify;
+    }
+}
+
+
+
+
+

@@ -15,10 +15,12 @@
     {{-- Icon Bootstrap --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     {{-- -------------- --}}
+
     {{-- JQuery CDN --}}
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     {{-- ---------- --}}
+
     <title>@yield('title')</title>
 </head>
 
@@ -26,7 +28,7 @@
     <a href="#tops" class="to-top">
         <i class="bi bi-caret-up"></i>
     </a>
-    <div class="header">
+    <div class="header before">
         <div class="header-info">
             <div class="left">
                 <p><i class="bi bi-telephone-fill"></i>Client Service: 021 2148 7710</p>
@@ -75,10 +77,10 @@
                 <li>
                     <p>|</p>
                 </li>
-                <li class="search">
+                {{-- <li class="search">
                     <input type="checkbox" name="search" id="search" hidden>
                     <label for="search"><i class="bi bi-search"></i></label>
-                </li>
+                </li> --}}
                 <li>
                     <a class="contact" href="/contactus">CONTACT US</a>
                 </li>
@@ -160,6 +162,15 @@
             });
         });
 
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop()) {
+                $('.header').removeClass('before').addClass('after');
+            } else {
+                $('.header').removeClass('after').addClass('before');
+            }
+        })
+
     </script>
 </body>
+
 </html>
