@@ -9,9 +9,9 @@
 </div>
 
 <div class="product-content">
-    <div class="left">
+    {{-- <div class="left">
         <img src="/Assets/Images/product.svg" alt="">
-    </div>
+    </div> --}}
     <div class="right">
         <div class="title">
             <p>WHY CHOOSE US</p>

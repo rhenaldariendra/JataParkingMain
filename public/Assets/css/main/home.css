@@ -629,6 +629,9 @@ blockquote a{
     flex-direction: column;
     align-items: center;
 }
+.dua blockquote h3{
+    text-align: center;
+}
 
 .dua blockquote p{
     font-family: 'Poppins';
@@ -789,19 +792,25 @@ nav>div>span {
     .content-3 .top .left {
         width: 300px;
     }
+
+
 }
 @media only screen and (max-width: 985px){
     .content-2 {
         box-sizing: border-box;
+        flex-direction: column;
         padding: 0 20px;
     }
     .content-2 .items {
         margin: 0 0;
+        width: 100%;
     }
     .content-2 .items h3{
-        font-size: 14px;
+        font-size: 20px;
     }
-
+    .content-2 .items p{
+        font-size: 15px;
+    }
     .content-3 .top .left {
         width: 250px;
     }
@@ -843,6 +852,15 @@ nav>div>span {
     .text p{
         width: 100%;
         text-align: justify;
+    }
+    .content-6 .containers {
+        padding: 0 20px;
+    }
+    .content-6 .containers .left {
+        margin-right: 50px;
+    }
+    .content-6 .containers .right p {
+        text-align:left !important;
     }
 }
 

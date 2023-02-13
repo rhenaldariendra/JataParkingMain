@@ -40,6 +40,7 @@
     background-color: #fff;
     box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
     transition: all 0.3s ease-in-out;
+    border-radius: 10px;
     /* transition: all 0.3s; */
 }
 
@@ -55,6 +56,7 @@
     bottom: -20px;
     /* display: none; */
     width: 100%;
+    border-radius: 10px;
     height: 100%;
     background-color: rgba(82, 82, 82, 0.349);
     transition: all 0.3s ease-in-out;
@@ -84,4 +86,22 @@
     font-weight: 600;
     font-size: 16px;
     color: #633AB4;
+}
+
+
+@media only screen and (max-width: 1340px){
+    .partner-list .item img {
+        height: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 985px){
+    .partner-list .item {
+        height: 70%;
+    }
+    .partner-list {
+        min-height: 45vh;
+        grid-template-rows: 0.5fr 0.5fr;
+    }
 }

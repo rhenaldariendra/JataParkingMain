@@ -24,11 +24,8 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    padding-left: 60px;
-}
-
-.product-content .right {
-    margin-left: 65px;
+    /* justify-content: center; */
+    padding-left: 65px;
 }
 
 .product-content .right .title {
@@ -119,3 +116,17 @@
     line-height: 17px;
     color: #FF8C39;
 }
+
+@media only screen and (max-width: 985px){
+    .product-content .partners .lefts {
+        margin-right: 20px;
+    }
+    .product-content .right .title h3 {
+        font-size: 28px;
+    }
+    .product-content {
+        padding: 0;
+        justify-content: center;
+    }
+}
+

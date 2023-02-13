@@ -26,9 +26,11 @@ a{
 }
 
 .after .header-navigation {
-    height: 40px;
+    height: fit-content;
 }
-
+.after .navigation li{
+    padding: 20px 18px;
+}
 .after .logo {
     height: 35px;
 }
@@ -37,13 +39,13 @@ a{
 }
 
 .after .header-navigation .navigation ul{
-    top: 40px;
+    top: 61px;
 }
 /*  */
 
 .to-top{
     position: fixed;
-    padding:10px 12px;
+    padding:10px 14.5px;
     background-color: #FF8C39;
     color:white;
     right: 20px;
@@ -56,6 +58,13 @@ a{
 .to-top:hover{
     background-color: #FBFFE8;
     color: #FF8C39;
+}
+
+.btn-hamb {
+    /* position: absolute; */
+    top: 80px;
+    right: 10px;
+    display: none;
 }
 
 .navigation-bar{
@@ -235,8 +244,7 @@ a{
 .header-navigation .navigation ul{
     position: absolute;
     top: 165px;
-
-    /* display: none; */
+    display: none;
     opacity: 0;
     visibility: hidden;
 
@@ -256,9 +264,6 @@ a{
 }
 
 .navigation ul li:hover > ul{
-    /* visibility: visible;
-    opacity: 1;
-    display: block; */
     background-color: black;
 }
 
@@ -296,6 +301,7 @@ a{
     z-index: 998;
     background: rgba(99, 58, 180, 0.85);
 }
+
 
 .footer .left{
     box-sizing: border-box;
@@ -404,5 +410,63 @@ a{
     .header-navigation {
         padding-left: 90px;
         padding-right: 35px;
+    }
+}
+@media only screen and (max-width: 985px){
+    .header-info .left {
+        padding-left:60px;
+        width: 40%;
+    }
+    .header-info .right {
+        width: 60%;
+        padding-right:20px;
+    }
+    .footer{
+        padding: 0 25px;
+    }
+    .head {
+        height: 133px;
+    }
+
+    .header-navigation {
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+        padding-left: 30px;
+        /* padding-bottom: 10px; */
+    }
+    .header-navigation .logo {
+        margin-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 90px;
+        /* margin-top: 20px; */
+    }
+    .header-navigation .navigation{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-navigation .navigation li{
+        padding: 20px;
+    }
+    .header-navigation .navigation ul{
+        position:static;
+        /* top: 70px; */
+        float: none;
+    }
+    .seps{
+        display: none;
+    }
+    .btn-hamb{
+        display: inline;
+    }
+    .header-navigation ul{
+        display: none;
+    }
+
+    #btn-hmb:checked+ul{
+        display: block;
     }
 }

@@ -52,13 +52,17 @@
                 <a href="/">
                     <img src="/Assets/Images/logo.svg" alt="Logo - Jataparking">
                 </a>
+                <label class="btn-hamb" for="btn-hmb">
+                    <i style="font-size: 40px" class="bi bi-list"></i>
+                </label>
             </div>
+            <input type="checkbox" name="btn-hmb" id="btn-hmb" hidden>
             <ul class="navigation">
                 <li>
                     <a href="/">HOME</a>
                 </li>
                 <li id="a">
-                    <a id="b" href="/profile_company">ABOUT US</a>
+                    <a id="b" href="#">ABOUT US</a>
                     <ul id="c">
                         <li><a href="/profile_company">Our Profile Company</a></li>
                         <li><a href="/contactus">Contact Us</a></li>
@@ -74,7 +78,7 @@
                 <li>
                     <a href="/news">NEWS & BLOGS</a>
                 </li>
-                <li>
+                <li class="seps">
                     <p>|</p>
                 </li>
                 {{-- <li class="search">
@@ -140,27 +144,43 @@
             $('#a').hover(function () {
                 $('#b').css('color', '#FF8C39');
                 $('#c').css('opacity', '1');
+                $('#c').css('display', 'block');
                 $('#c').css('visibility', 'visible');
             }, function () {
                 // on mouseout, reset the background colour
                 $('#b').css('color', '#633AB4');
                 $('#c').css('opacity', '0');
+                $('#c').css('display', 'none');
                 $('#c').css('visibility', 'hidden');
             });
         });
-
+        document.getElementById("e").addEventListener("click", function(event){
+            event.preventDefault()
+        });
+        document.getElementById("b").addEventListener("click", function(event){
+            event.preventDefault()
+        });
         $(function () {
             $('#d').hover(function () {
                 $('#e').css('color', '#FF8C39');
                 $('#f').css('opacity', '1');
+                $('#f').css('display', 'block');
                 $('#f').css('visibility', 'visible');
             }, function () {
                 // on mouseout, reset the background colour
                 $('#e').css('color', '#633AB4');
                 $('#f').css('opacity', '0');
+                $('#f').css('display', 'none');
                 $('#f').css('visibility', 'hidden');
             });
         });
+        // $(function () {
+        //     if($('#btn-hamb').checked == true) {
+
+        //     }
+
+        // });
+
 
         $(window).on('scroll', function () {
             if ($(window).scrollTop()) {
