@@ -35,9 +35,9 @@
         <div class="desc_content">
             <p class="wlcm">Welcome to Jataparking</p>
             <div class="bx_bluebig">
-                <h1 class="bluebig">We Have 20+ Years Experiance</h1>
+                <h1 class="bluebig">PT. Karnika Jata Sadawija</h1>
             </div>
-            <p class="desc_bold">Parkir merupakan sumber pendapatan lain yang berdampak pada sumber pendapatan utama. Perparkiran merupakan pintu gerbang utama dan terakhir yang berpengaruh terhadap image property secara keseluruhan oleh pengguna jasa parkir.</p>
+            <p class="desc_bold">Parkir merupakan sumber pendapatan lain yang berdampak pada sumber pendapatan utama.</p>
             <p class="desc_nobold">Perparkiran merupakan pintu gerbang utama dan terakhir yang berpengaruh terhadap image property secara keseluruhan oleh pengguna jasa parkir. Masih awam dan minimnya sumber daya manusia akan pengetahuan sistem pengelolaan parkir seharusnya dapat dikelola secara profesional, efisien, efektif dan sistematis untuk meningkatkan kenyamanan dan keamanan bagi pengguna jasa parkir. Maka perlu adanya pengelolaan perparkiran yang berbadan hukum dalam bentuk perusahaan sebagai solusi penyedia jasa pengelolaan perparkiran. Selain itu penyedia jasa pengelolaan perparkiran juga dapat membantu program pemerintah dalam mengurangi angka pengangguran dengan menciptakan lapangan perkerjaan.</p>
             <p class="ceo">Company CEO</p>
             <img src="/Assets/Images/jataparking-logo.svg" alt="">
@@ -47,10 +47,10 @@
         <div class="container_aboutus">
             <img src="/Assets/Images/flag-white.svg" alt="">
             <h2 class="blue_small">Our History</h2>
-            <p>Tahun 2005, Veni Liu mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
+            <p>Tahun 2022, Eka Saputri mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
                 perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang
                 profesional yang didukung sistem teknologi modern serta sumber daya manusia
-                berkompetensi tinggi. Tahun 2016, bisnis ini dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
+                berkompetensi tinggi.</p>
         </div>
         <div class="container_aboutus">
             <img src="/Assets/Images/bag-white.svg" alt="">
