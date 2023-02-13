@@ -47,7 +47,7 @@
         <div class="container_aboutus">
             <img src="/Assets/Images/flag-white.svg" alt="">
             <h2 class="blue_small">Our History</h2>
-            <p>Tahun 2005, Veni Liu mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
+            <p>Tahun 2022, Eka Saputri mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
                 perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang
                 profesional yang didukung sistem teknologi modern serta sumber daya manusia
                 berkompetensi tinggi.</p>
