@@ -90,7 +90,7 @@
             <p>24/7 Services</p>
 
         </div>
-        <div class="items">
+        <div class="items tiga">
             <i class="bi bi-patch-check"></i>
             <p>Verified Professionals</p>
 

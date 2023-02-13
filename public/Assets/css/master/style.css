@@ -465,8 +465,72 @@ a{
     .header-navigation ul{
         display: none;
     }
-
+    .satu blockquote h3 {
+        font-size: 50px !important;
+    }
     #btn-hmb:checked+ul{
         display: block;
+    }
+}
+@media only screen and (max-width: 426px){
+    .satu blockquote p {
+        font-size: 12px !important
+    }
+    .satu blockquote h3 {
+        font-size: 30px !important;
+    }
+    .dua blockquote h3 {
+        font-size: 20px !important
+    }
+    .dua blockquote p {
+        font-size: 12px !important;
+        line-height: 0;
+    }
+    blockquote a {
+        font-size: 10px !important;
+    }
+    .header .header-info{
+        display: none;
+    }
+
+    .head{
+        height: 90px;
+    }
+
+    .footer{
+        flex-direction: column;
+        height: fit-content;
+    }
+    .footer .right, .footer .left{
+        width: 100%;
+    }
+    .footer .info{
+        margin-top: 10px;
+    }
+    .footer .left{
+        padding: 30px 0 10px;
+    }
+    .footer .right {
+        padding: 20px 0;
+        align-items: flex-start;
+    }
+    .btn-container{
+        margin-bottom: 20px;
+    }
+    .social{
+        margin-top:10px;
+    }
+    .footer .left .copyright {
+        font-size: 12px;
+    }
+    .footer .right .btn {
+        font-size: 12px !important;
+    }
+    .footer .contact p:first-child{
+        font-size: 16px;
+    }
+    .footer .phone {
+        margin-top: 5px;
+        font-size: 17px !important;
     }
 }

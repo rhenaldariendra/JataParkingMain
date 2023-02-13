@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-style: normal;
     font-weight: 600;
     font-size: 35px;
-    width: 352px;
+    /* width: 352px; */
     margin-bottom: 30px;
     color: #FFFFFF;
 }
@@ -705,6 +705,10 @@ nav div:last-of-type {
     transition: box-shadow .3s;
 }
 
+.next{
+    margin-right:  0px !important;
+}
+
 .prev::before,
 .prev::after,
 .next::before,
@@ -867,4 +871,109 @@ nav>div>span {
 
 
 
+@media only screen and (max-width: 426px){
+    .prev, .next {
+        width: 50%;
+        height: 50%;
+    }
+    nav div:last-of-type {
+        right: -35px;
+    }
+    .content-2 .items {
+        height: 230px;
+    }
+    .content-2 .items h3{
+        font-size: 15px;
+    }
+    .content-2 .items p{
+        font-size: 10px;
+    }
 
+    .content-3 .line {
+        margin: 40px 0 20px;
+    }
+    .content-3 .top{
+        flex-direction: column;
+    }
+    .content-3 .top .right, .content-3 .top .left{
+        margin: 0;
+    }
+    .content-3 .bottom{
+        display: grid;
+        column-gap: 20px;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+    .content-3 .bottom .tiga{
+        grid-column-start:1;
+        grid-column-end:span 2;
+        grid-row-start: 2;
+        /* grid-row-end: span 2; */
+    }
+    .content-3 .bottom .items{
+        width: 120px ;
+        margin: 0 1px;
+    }
+
+    .content-3 .bottom .items i{
+        font-size: 30px;
+    }
+    .content-3 .bottom .items p{
+        margin-left: 10px;
+        /* width: 100px; */
+        font-size: 14px;
+    }
+    .content-3 .top .right {
+        width: 90%;
+    }
+    .content-4{
+        height: 550px;
+    }
+    .content-4 .container .items .right p {
+        width: 100%;
+    }
+    .content-5 .right{
+        height: 380px;
+    }
+    .content-5 .left img{
+        height: 450px;
+    }
+    .content-6 {
+        margin-bottom: 30px;
+        margin-top: 35px;
+    }
+
+    .content-6 .containers{
+        flex-direction: column;
+    }
+
+    .content-6 .containers .left {
+        margin: 0;
+        width: 100%;
+    }
+    .content-6 .containers .left .title{
+        padding-left: 10px;
+    }
+    .content-4 .container{
+        margin: 0;
+        width: 100%;
+    }
+    .content-4 .lefts{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .content-4 .rights{
+        display: none;
+    }
+    .content-4 .container h3 {
+        font-size: 30px;
+    }
+
+    .content-4 .container .items .right {
+        margin-left: 10px;
+    }
+    .dua blockquote p {
+        text-align: center;
+        line-height: 15px;
+    }
+}
