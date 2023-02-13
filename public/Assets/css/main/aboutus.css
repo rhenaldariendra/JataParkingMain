@@ -465,7 +465,7 @@ border-radius: 2px;
         width: 80%;
     }
     .bluebig{
-        font-size: 22px;
+        font-size: 25px;
     }
 
     .desc_bold{
@@ -1375,5 +1375,25 @@ border-radius: 2px;
     .klik_btn{
         font-size: 10px;
         padding: 7px 14px;
+    }
+}
+
+@media screen and (max-width:1148px){
+    .content_aboutus{
+        padding: 70px 100px 0;
+    }
+
+    .desc_content{
+        padding-left: 45px;
+    }
+
+}
+
+@media  screen and (max-width:857px){
+    .content_aboutus{
+        padding: 70px 70px 0;
+    }
+    .comp_img{
+        width: 50%;;
     }
 }
