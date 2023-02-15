@@ -16,7 +16,7 @@
                     <blockquote>
                         <h3>Welcome to Jataparking</h3>
                         <p><i class="bi bi-dot"></i> Profesional <i class="bi bi-dot"></i> Inovatif</p>
-                        <a href="#">VIEW MORE DETAILS</a>
+                        <a href="/profile_company">VIEW MORE DETAILS</a>
                     </blockquote>
                 </div>
             </li>
@@ -26,7 +26,7 @@
                         <h3>We are Always Ready to Service</h3>
                         <p>For immediate Services Dial</p>
                         <p style="color:#FF8C39">021 2148 7710</p>
-                        <a href="#">VIEW MORE DETAILS</a>
+                        <a href="/contactus">VIEW MORE DETAILS</a>
                     </blockquote>
                 </div>
             </li>
@@ -43,19 +43,19 @@
         <i class="bi bi-gear"></i>
         <h3>Large Number of Parking Services Provided</h3>
         <p>We are a company providing a wide range of parking area services.</p>
-        <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
+        <a href="/product">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
     <div class="items">
         <i class="bi bi-person"></i>
-        <h3>Large Number of Parking Services Provided</h3>
-        <p>We are a company providing a wide range of parking area services.</p>
-        <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
+        <h3>20+ Years of Professional Experience</h3>
+        <p>We work to ensure people’s comfort, to provide the best and the fastest.</p>
+        <a href="/product">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
     <div class="items">
         <i class="bi bi-hand-thumbs-up"></i>
-        <h3>Large Number of Parking Services Provided</h3>
-        <p>We are a company providing a wide range of parking area services.</p>
-        <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
+        <h3>A Large Number of Customers</h3>
+        <p>We have been working for years to improve our systems, to expand the spheres of our work.</p>
+        <a href="/product">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
 </div>
 
@@ -157,7 +157,8 @@
                         <img src="/Assets/Images/no1.svg" alt="">
                         <h3>History</h3>
                     </div>
-                    <p>Tahun 2000, H. Ahmad Hadi mendirikan PT. Mitra Adiguna Pratama. Sejak itu, perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi. Tahun 2016, bisnis ini dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
+                    <p>Tahun 2022, Eka Saputri mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
+                        perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi.</p>
                 </div>
             </div>
 
@@ -197,7 +198,7 @@
                 <p>{{$top->type}}</p>
                 <h3>{{$top->title}}</h3>
             </div>
-            <img src="{{Storage::url($top->photo)}}" alt="">
+            <img src="{{Storage::url($top->photo)}}" alt="" style="object-fit: cover">
             <p>{{$top->description}}</p>
             <a href="/detail/{{$top->id}}">READ MORE <i class="bi bi-chevron-double-right"></i></a>
         </div>
@@ -208,7 +209,7 @@
             @foreach ($data as $key)
                 <a href="/detail/{{$key->id}}">
                     <div class="items">
-                        <img src="{{Storage::url($key->photo)}}" alt="">
+                        <img src="{{Storage::url($key->photo)}}" alt="" style="object-fit: cover">
                         <div class="rights">
                             <p>{{date('F j, Y', strtotime($key->date))}}</p>
                             <p>{{$key->title}}</p>
