@@ -12,21 +12,23 @@
     <section class="cd-slider">
         <ul>
             <li>
-                <div class="content satu" style="background-image:url('/Assets/Images/slider1.svg')">
+                <div class="content satu">
+                    <img src="/Assets/Images/slider1.svg" alt="">
                     <blockquote>
                         <h3>Welcome to Jataparking</h3>
                         <p><i class="bi bi-dot"></i> Profesional <i class="bi bi-dot"></i> Inovatif</p>
-                        <a href="#">VIEW MORE DETAILS</a>
+                        <a href="/profile_company">VIEW MORE DETAILS</a>
                     </blockquote>
                 </div>
             </li>
             <li>
-                <div class="content dua" style="background-image:url('/Assets/Images/slider2.svg">
+                <div class="content dua">
+                    <img src="/Assets/Images/slider2.svg" alt="">
                     <blockquote>
                         <h3>We are Always Ready to Service</h3>
                         <p>For immediate Services Dial</p>
                         <p style="color:#FF8C39">021 2148 7710</p>
-                        <a href="#">VIEW MORE DETAILS</a>
+                        <a href="/product">VIEW MORE DETAILS</a>
                     </blockquote>
                 </div>
             </li>
@@ -47,14 +49,14 @@
     </div>
     <div class="items">
         <i class="bi bi-person"></i>
-        <h3>Large Number of Parking Services Provided</h3>
-        <p>We are a company providing a wide range of parking area services.</p>
+        <h3>20+ Years of Professional Experience</h3>
+        <p>We work to ensure people’s comfort, to provide the best and the fastest.</p>
         <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
     <div class="items">
         <i class="bi bi-hand-thumbs-up"></i>
-        <h3>Large Number of Parking Services Provided</h3>
-        <p>We are a company providing a wide range of parking area services.</p>
+        <h3>A Large Number of Customers</h3>
+        <p>We have been working for years to improve our systems, to expand the spheres of our work.</p>
         <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
 </div>
@@ -157,7 +159,10 @@
                         <img src="/Assets/Images/no1.svg" alt="">
                         <h3>History</h3>
                     </div>
-                    <p>Tahun 2000, H. Ahmad Hadi mendirikan PT. Mitra Adiguna Pratama. Sejak itu, perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi. Tahun 2016, bisnis ini dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
+                    <p>Tahun 2000, H. Ahmad Hadi mendirikan PT. Mitra Adiguna Pratama. Sejak itu, perusahaan ini telah
+                        berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem
+                        teknologi modern serta sumber daya manusia berkompetensi tinggi. Tahun 2016, bisnis ini
+                        dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
                 </div>
             </div>
 
@@ -167,7 +172,9 @@
                         <img src="/Assets/Images/no2.svg" alt="">
                         <h3>Vision</h3>
                     </div>
-                    <p>Menjadi perusahaan jasa pengelola parkir yang profesional dengan di dukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi untuk menjadi perusahaan termaju dan terkemuka.</p>
+                    <p>Menjadi perusahaan jasa pengelola parkir yang profesional dengan di dukung sistem teknologi
+                        modern serta sumber daya manusia berkompetensi tinggi untuk menjadi perusahaan termaju dan
+                        terkemuka.</p>
                 </div>
             </div>
 
@@ -177,7 +184,9 @@
                         <img src="/Assets/Images/no3.svg" alt="">
                         <h3>Mission</h3>
                     </div>
-                    <p>Meningkatkan pertumbuhan usaha sehingga dapat memberikan hasil terbaik bagi mitra usaha, pengguna jasa dan karyawan yang profesional. Meningkatkan mutu layanan yang berorientasi kepada kepuasan pengguna jasa dan meningkatkan koordinasi dengan mitra usaha.</p>
+                    <p>Meningkatkan pertumbuhan usaha sehingga dapat memberikan hasil terbaik bagi mitra usaha, pengguna
+                        jasa dan karyawan yang profesional. Meningkatkan mutu layanan yang berorientasi kepada kepuasan
+                        pengguna jasa dan meningkatkan koordinasi dengan mitra usaha.</p>
                 </div>
             </div>
 
@@ -206,15 +215,15 @@
                 <h3>RECENT POST</h3>
             </div>
             @foreach ($data as $key)
-                <a href="/detail/{{$key->id}}">
-                    <div class="items">
-                        <img src="{{Storage::url($key->photo)}}" alt="">
-                        <div class="rights">
-                            <p>{{date('F j, Y', strtotime($key->date))}}</p>
-                            <p>{{$key->title}}</p>
-                        </div>
+            <a href="/detail/{{$key->id}}">
+                <div class="items">
+                    <img src="{{Storage::url($key->photo)}}" alt="">
+                    <div class="rights">
+                        <p>{{date('F j, Y', strtotime($key->date))}}</p>
+                        <p>{{$key->title}}</p>
                     </div>
-                </a>
+                </div>
+            </a>
             @endforeach
         </div>
     </div>

@@ -49,7 +49,7 @@
                     <h3>Our Partners</h3>
                 </div>
 
-                <a href="#">MORE DETAILS <i class="bi bi-chevron-double-right"></i></a>
+                <a href="/partner">MORE DETAILS <i class="bi bi-chevron-double-right"></i></a>
             </div>
         </div>
 

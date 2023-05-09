@@ -14,6 +14,17 @@ h1, h2, h3, h4, h5, h6, p, a {
     overflow-x: hidden;
 } */
 
+.content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .cd-slider .content {
+    background-size: cover;
+    background-position: center;
+}
+
 .slider {
     content: '';
     height: 75vh;
@@ -556,12 +567,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     left: 0;
     width: 100%;
     height: 100%;
-    background-position: 50% 100%;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    mix-blend-mode: lighten;
     opacity: 0;
-    transform: scale(1.2);
     transition: opacity .4s .6s, transform .4s .6s;
 }
 
@@ -799,6 +805,16 @@ nav>div>span {
 
 
 }
+@media only screen and (max-width: 1149px){
+
+    .content-6 .containers {
+        padding: 0 30px;
+    }
+    .content-4 .lefts {
+        width: 50%;
+    }
+
+}
 @media only screen and (max-width: 985px){
     .content-2 {
         box-sizing: border-box;
@@ -970,7 +986,7 @@ nav>div>span {
     }
 
     .content-4 .container .items .right {
-        margin-left: 10px;
+        margin-left: 25px;
     }
     .dua blockquote p {
         text-align: center;

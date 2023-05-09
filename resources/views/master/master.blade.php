@@ -64,7 +64,7 @@
                 <li id="a">
                     <a id="b" href="#">ABOUT US</a>
                     <ul id="c">
-                        <li><a href="/profile_company">Our Profile Company</a></li>
+                        <li><a href="/profile_company">Profile Company</a></li>
                         <li><a href="/contactus">Contact Us</a></li>
                     </ul>
                 </li>
