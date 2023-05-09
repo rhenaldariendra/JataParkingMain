@@ -45,19 +45,19 @@
         <i class="bi bi-gear"></i>
         <h3>Large Number of Parking Services Provided</h3>
         <p>We are a company providing a wide range of parking area services.</p>
-        <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
+        <a href="/product">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
     <div class="items">
         <i class="bi bi-person"></i>
         <h3>20+ Years of Professional Experience</h3>
         <p>We work to ensure people’s comfort, to provide the best and the fastest.</p>
-        <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
+        <a href="/product">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
     <div class="items">
         <i class="bi bi-hand-thumbs-up"></i>
         <h3>A Large Number of Customers</h3>
         <p>We have been working for years to improve our systems, to expand the spheres of our work.</p>
-        <a href="#">More Services <i class="bi bi-chevron-double-right"></i></a>
+        <a href="/product">More Services <i class="bi bi-chevron-double-right"></i></a>
     </div>
 </div>
 
@@ -159,10 +159,8 @@
                         <img src="/Assets/Images/no1.svg" alt="">
                         <h3>History</h3>
                     </div>
-                    <p>Tahun 2000, H. Ahmad Hadi mendirikan PT. Mitra Adiguna Pratama. Sejak itu, perusahaan ini telah
-                        berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem
-                        teknologi modern serta sumber daya manusia berkompetensi tinggi. Tahun 2016, bisnis ini
-                        dilanjutkan oleh Fajrul Falah sebagai President Director.</p>
+                    <p>Tahun 2022, Eka Saputri mendirikan PT. Karnika Jata Sadajiwa. Sejak itu,
+                        perusahaan ini telah berkembang menjadi perusahaan jasa pengelola parkir yang profesional yang didukung sistem teknologi modern serta sumber daya manusia berkompetensi tinggi.</p>
                 </div>
             </div>
 
@@ -206,7 +204,7 @@
                 <p>{{$top->type}}</p>
                 <h3>{{$top->title}}</h3>
             </div>
-            <img src="{{Storage::url($top->photo)}}" alt="">
+            <img src="{{Storage::url($top->photo)}}" alt="" style="object-fit: cover">
             <p>{{$top->description}}</p>
             <a href="/detail/{{$top->id}}">READ MORE <i class="bi bi-chevron-double-right"></i></a>
         </div>
@@ -215,15 +213,15 @@
                 <h3>RECENT POST</h3>
             </div>
             @foreach ($data as $key)
-            <a href="/detail/{{$key->id}}">
-                <div class="items">
-                    <img src="{{Storage::url($key->photo)}}" alt="">
-                    <div class="rights">
-                        <p>{{date('F j, Y', strtotime($key->date))}}</p>
-                        <p>{{$key->title}}</p>
+                <a href="/detail/{{$key->id}}">
+                    <div class="items">
+                        <img src="{{Storage::url($key->photo)}}" alt="">
+                        <div class="rights">
+                            <p>{{date('F j, Y', strtotime($key->date))}}</p>
+                            <p>{{$key->title}}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
             @endforeach
         </div>
     </div>
